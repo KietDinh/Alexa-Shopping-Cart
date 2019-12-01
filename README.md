@@ -10,3 +10,5 @@ Step 3: Now you'll be on a page with a video in the middle, on the right it says
 Step 4: On the Code page you should see three files "index.js", "package.json", and "util.js". Replace each of those with the code in this        repository and then click deploy.
 
 Step 5: Once it finishes deploying you should be ready to test. Click "Test" at the top. Now make sure that                                       "Skill testing is enabled in : " Development. Then where it says type or click type start shopping cart. Now you can try adding or          removing stuff from the cart.
+
+Repository is made public because a private repository can only have 3 contributors. 
