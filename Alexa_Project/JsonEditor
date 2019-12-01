@@ -1,0 +1,227 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "shopping cart",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "Add",
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "AMAZON.Food"
+                        }
+                    ],
+                    "samples": [
+                        "place {item} in the cart",
+                        "add {item}",
+                        "put {item} in my shopping cart",
+                        "put {item} in my cart",
+                        "place {item} in my shopping cart",
+                        "place {item} in my cart",
+                        "Add {item} to my shopping cart",
+                        "Add {item} to my cart"
+                    ]
+                },
+                {
+                    "name": "Remove",
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "AMAZON.Food"
+                        }
+                    ],
+                    "samples": [
+                        "remove {item}",
+                        "take {item} out of my shopping cart",
+                        "take {item} out of my cart",
+                        "take {item} out of the shopping cart",
+                        "take {item} out of the cart",
+                        "remove {item} from my shopping cart",
+                        "remove {item} from the shopping cart",
+                        "remove {item} from my cart",
+                        "remove {item} from the cart"
+                    ]
+                },
+                {
+                    "name": "Empty",
+                    "slots": [],
+                    "samples": [
+                        "lets start over",
+                        "start over",
+                        "clear the shopping cart",
+                        "clear the cart",
+                        "empty the shopping cart",
+                        "empty shopping cart",
+                        "empty cart",
+                        "empty the cart"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "Add",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "AMAZON.Food",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "Remove",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.373197117262"
+                    },
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "AMAZON.Food",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "Empty",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.974841853197"
+                    },
+                    "slots": []
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.605476349357.976138469775",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What would you like me to remove?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What would you like me to add?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.605476349357.970400130020.1550397703765",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry I can't do that. Say help for a what I can do."
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.605476349357.220887166571.452084995771",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry I can't do that. Say help for a what I can do."
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.605476349357.648121460590.704934660935",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry I can't do that. Say help for a what I can do."
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.938599652006",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you sure you want to remove all items from the cart?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.996540536676.1333560543029",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What would you like me to add?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1155285135457.1443149093321",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What would you like me to remove?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.730292205629",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you sure you want me to add {item} to the shopping cart?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.416545231446",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you sure you want to remove {item} from the shopping cart?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.373197117262",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you sure you want to remove {item} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.974841853197",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you sure you want to remove all items from the cart?"
+                    }
+                ]
+            }
+        ]
+    }
+}
